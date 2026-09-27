@@ -1,0 +1,19 @@
+{
+  "name": "quiz1-jakartafolio",
+  "version": "1.0.0",
+  "description": "Website personal statis bertema DKI Jakarta dengan backend Node.js/Express untuk keperluan Tugas Quiz 1 Webpro.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["jakarta", "portfolio", "express", "quiz1"],
+  "author": "Raihan Naufal R",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
