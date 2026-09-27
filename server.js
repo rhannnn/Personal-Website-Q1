@@ -71,17 +71,15 @@ app.use((req, res) => {
 // -------------------------------------------------------------
 // Jalankan server
 // -------------------------------------------------------------
-// Catatan: di Vercel, aplikasi ini dijalankan sebagai serverless
-// function lewat file "api/index.js" (app.listen TIDAK dipanggil
-// di sana). app.listen() hanya berjalan saat file ini dieksekusi
-// langsung secara lokal, misalnya lewat "npm start" / "node server.js".
-if (require.main === module) {
-  app.listen(PORT, () => {
-    console.log("=================================================");
-    console.log(`  JakartaFolio server berjalan di port ${PORT}`);
-    console.log(`  Buka: http://localhost:${PORT}/quiz1`);
-    console.log("=================================================");
-  });
-}
-
-module.exports = app;
+// PENTING: app.listen() HARUS dipanggil langsung tanpa syarat apa pun.
+// Saat berjalan lokal, ini benar-benar membuka port 3000 di komputer Anda.
+// Saat di-deploy ke Vercel, Vercel mendeteksi panggilan listen() ini
+// secara otomatis (fitur "zero-config Node.js server") dan mengarahkan
+// semua traffic ke server ini -- port yang ditulis di bawah ini TIDAK
+// dipakai sebagai port publik di Vercel, hanya dipakai saat lokal.
+app.listen(PORT, () => {
+  console.log("=================================================");
+  console.log(`  Raihannaufal server berjalan di port ${PORT}`);
+  console.log(`  Buka: http://localhost:${PORT}/quiz1`);
+  console.log("=================================================");
+});
