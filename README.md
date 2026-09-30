@@ -1,4 +1,4 @@
-# JakartaFolio — Website Personal Statis (Tema DKI Jakarta)
+# Raihan NAufal — Website Personal Statis (Tema DKI Jakarta)
 
 Tugas Quiz 1 Webpro: website personal statis (HTML, CSS, JavaScript) dengan
 backend Node.js/Express untuk routing dan static file. Desain menggunakan
